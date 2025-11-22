@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <title>Curtain creations</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--
+    Polygon Template
+    https://templatemo.com/tm-400-polygon
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/templatemo_misc.css' %}">
+    <link href="{% static 'css/templatemo_style.css' %}" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,600'
+          rel='stylesheet'
+          type='text/css'>
+    <script src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
+    <script src="{% static 'js/jquery.lightbox.js' %}"></script>
+    <script src="{% static 'js/templatemo_custom.js' %}"></script>
+    <script>
+    function showhide()
+    {
+    	var div = document.getElementById("newpost");
+		if (div.style.display !== "none")
+		{
+			div.style.display = "none";
+		}
+		else {
+			div.style.display = "block";
+		}
+    }
+    </script>
+</head>
+<body>
+    <div class="site-header">
+        <div class="main-navigation">
+            <div class="responsive_menu">
+                <ul>
+                    <li>
+                        <a class="show-1 templatemo_home" href="#">Gallery</a>
+                    </li>
+                    <li>
+                        <a class="show-3 templatemo_page3" href="#">Services</a>
+                    </li>
+                    <li>
+                        <a class="show-5 templatemo_page5" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container">
+                <div class="row templatemo_gallerygap">
+                    <div class="col-md-12 responsive-menu">
+                        <a href="#" class="menu-toggle-btn">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                    <!-- /.col-md-12 -->
+                    <div class="col-md-3 col-sm-12">
+                        <!-- LOGO TEXT بدل الصورة -->
+                        <a href="#" class="logo-text">
+                            <span class="logo-main">ابداعات الستائر</span>
+                            <br>
+                            <span class="logo-sub">Curtain creations</span>
+                        </a>
+                        <style>
+    .logo-text {
+        text-decoration: none;
+    }
+
+    .logo-main {
+        font-size: 38px;
+        font-weight: 700;
+        color: #b28c55; /* ذهبي رايق */
+        font-family: 'Raleway', sans-serif;
+        letter-spacing: 2px;
+        text-shadow: 0 0 4px rgba(210, 190, 150, 0.7);
+        display: inline-block;
+        margin-bottom: -5px;
+    }
+
+    .logo-sub {
+        font-size: 20px;
+        font-weight: 500;
+        color: #a07d1cff;
+        font-family: 'Raleway', sans-serif;
+        letter-spacing: 1px;
+        margin-top: -5px;
+        display: inline-block;
+    }
+                        </style>
+                    </div>
+                    <div class="col-md-9 main_menu">
+                        <ul>
+                            <li>
+                                <a class="show-1 templatemo_home" href="#">
+                                    <span class="fa fa-camera"></span>
+                                Gallery</a>
+                            </li>
+                            <li>
+                                <a class="show-3 templatemo_page3" href="#">
+                                    <span class="fa fa-cogs"></span>
+                                Services</a>
+                            </li>
+                            <li>
+                                <a class="show-5 templatemo_page5" href="#">
+                                    <span class="fa fa-envelope"></span>
+                                Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.col-md-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.main-navigation -->
+    </div>
+    <!-- /.site-header -->
+    {% block content %}
+    {% endblock content %}
+    <!-- contact end -->
+    <!-- footer start -->
+    <div class="templatemo_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-sm-12">
+                    <span>Copyright &copy; 2025 Curtain creations </span>
+                </div>
+                <div class="col-md-3 col-sm-12 templatemo_rfooter">
+                    <a href="#">
+                        <div class="hex_footer">
+                            <span class="fa fa-facebook"></span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="hex_footer">
+                            <span class="fa fa-twitter"></span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="hex_footer">
+                            <span class="fa fa-linkedin"></span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="hex_footer">
+                            <span class="fa fa-rss"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer end -->
+    <script>
+	$('.gallery_more').click(function(){
+		var $this = $(this);
+		$this.toggleClass('gallery_more');
+		if($this.hasClass('gallery_more')){
+			$this.text('Load More');			
+		} else {
+			$this.text('Load Less');
+		}
+	});
+    </script>
+    <!-- templatemo 400 polygon -->
+</body>
+</html>

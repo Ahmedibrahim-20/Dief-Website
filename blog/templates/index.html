@@ -1,0 +1,275 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div id="menu-container">
+        <!-- gallery start -->
+        <div class="content homepage" id="menu-1">
+            <div class="container">
+                <div class="row templatemorow">
+                    {% for item in blo|slice:":9" %}
+                        <div class="hex col-sm-6 {% cycle '' '' 'templatemo-hex-top2' 'templatemo-hex-top3' 'templatemo-hex-top3' 'hex-offset templatemo-hex-top1 templatemo-hex-top2' 'templatemo-hex-top1 templatemo-hex-top3' 'templatemo-hex-top1 templatemo-hex-top3' 'templatemo-hex-top1 templatemo-hex-top2' %}">
+                            <div>
+                                <div class="hexagon hexagon2 gallery-item">
+                                    <div class="hexagon-in1">
+                                        <div class="hexagon-in2"
+                                             style="background-image: url({{ item.image.url }})">
+                                            <div class="overlay">
+                                                <a href="{{ item.image.url }}" data-rel="lightbox" class="fa fa-expand"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div id="newpost"
+                 style="display:none"
+                 class="container answer_list templatemo_gallerytop">
+                <div class="row templatemorow">
+                    {% for item in blo|slice:"9:" %}
+                        <div class="hex col-sm-6 {% cycle '' '' 'templatemo-hex-top2' 'templatemo-hex-top3' 'templatemo-hex-top3' 'hex-offset templatemo-hex-top1 templatemo-hex-top2' 'templatemo-hex-top1 templatemo-hex-top3' 'templatemo-hex-top1 templatemo-hex-top3' 'templatemo-hex-top1 templatemo-hex-top2' %}">
+                            <div>
+                                <div class="hexagon hexagon2 gallery-item">
+                                    <div class="hexagon-in1">
+                                        <div class="hexagon-in2"
+                                             style="background-image: url({{ item.image.url }})">
+                                            <div class="overlay">
+                                                <a href="{{ item.image.url }}" data-rel="lightbox" class="fa fa-expand"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="templatemo_loadmore">
+                        <button class="gallery_more" id="button" onClick="showhide()">Load More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- gallery end -->
+        <div class="clear"></div>
+        <!-- service start -->
+        <div class="content services" id="menu-3">
+            <div class="container">
+                <div class="row templatemo_servicerow">
+                    <div class="templatemo_hexservices col-sm-6">
+                        <div class="blok text-center">
+                            <div class="hexagon-a">
+                                <a class="hlinktop" href="#">
+                                    <div class="hexa-a">
+                                        <div class="hcontainer-a">
+                                            <div class="vertical-align-a">
+                                                <span class="texts-a"><i class="fa fa-bell"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="hexagonservices">
+                                <a class="hlinkbott" href="#">
+                                    <div class="hexa">
+                                        <div class="hcontainer">
+                                            <div class="vertical-align">
+                                                <span class="texts"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="templatemo_servicetext">
+                            <h3>أهمية الستائر✨</h3>
+                            <p>
+                                تلعب الستائر دورًا أساسيًا في أي مساحة داخلية؛ فهي ليست مجرد قطعة ديكور، بل عنصر يجمع بين الجمال والوظيفة في آن واحد. تساعد الستائر على خلق جو مريح ومتوازن داخل المنزل، حيث تتحكم في كمية الضوء الداخل، وتحافظ على خصوصية المكان، وتضيف لمسة دفء وأناقة تعكس ذوق أصحاب المنزل.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="templatemo_hexservices col-sm-6">
+                        <div class="blok text-center">
+                            <div class="hexagon-a">
+                                <a class="hlinktop" href="#">
+                                    <div class="hexa-a">
+                                        <div class="hcontainer-a">
+                                            <div class="vertical-align-a">
+                                                <span class="texts-a"><i class="fa fa-briefcase"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="hexagonservices">
+                                <a class="hlinkbott" href="#">
+                                    <div class="hexa">
+                                        <div class="hcontainer">
+                                            <div class="vertical-align">
+                                                <span class="texts"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="templatemo_servicetext">
+                            <h3>وظيفة الستائر✨</h3>
+                            <p>
+                                تسهم الستائر في تحسين الطابع الجمالي للغرفة، إذ تكمل تصميم الأثاث والألوان، وتحوّل المساحة العادية إلى لوحة فنية نابضة بالحياة. وبجانب ذلك، تساعد الستائر المناسبة في عزل الحرارة والصوت بشكل فعّال، مما يجعلها جزءًا مهمًا من راحة المنزل وجودة العيش.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="templatemo_hexservices col-sm-6">
+                        <div class="blok text-center">
+                            <div class="hexagon-a">
+                                <a class="hlinktop" href="#">
+                                    <div class="hexa-a">
+                                        <div class="hcontainer-a">
+                                            <div class="vertical-align-a">
+                                                <span class="texts-a"><i class="fa fa-mobile"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="hexagonservices">
+                                <a class="hlinkbott" href="#">
+                                    <div class="hexa">
+                                        <div class="hcontainer">
+                                            <div class="vertical-align">
+                                                <span class="texts"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="templatemo_servicetext">
+                            <h3>لمن خدماتنا🎯</h3>
+                            <p>
+                                الشركات التي تبحث عن لمسات احترافية تعكس هوية المكان وتعزز بيئة العمل بشكل أنيق ومريح.
+                                المنازل الراغبة في إضافة طابع دافئ وراقي يبرز جمال المساحات ويجعلها أكثر راحة وخصوصية.
+                                الفنادق التي تحتاج إلى ستائر فاخرة ومتقنة تمنح ضيوفها تجربة إقامة مميزة ومتكاملة.
+                                المستشفيات والمراكز الطبية التي تتطلب ستائر عالية الجودة تلائم المعايير الصحية وتوفر الخصوصية والأمان.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="templatemo_hexservices col-sm-6">
+                        <div class="blok text-center">
+                            <div class="hexagon-a">
+                                <a class="hlinktop" href="#">
+                                    <div class="hexa-a">
+                                        <div class="hcontainer-a">
+                                            <div class="vertical-align-a">
+                                                <span class="texts-a"><i class="fa fa-trophy"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="hexagonservices">
+                                <a class="hlinkbott" href="#">
+                                    <div class="hexa">
+                                        <div class="hcontainer">
+                                            <div class="vertical-align">
+                                                <span class="texts"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="templatemo_servicetext">
+                            <h3>🏆 خبرة نفخر بها</h3>
+                            <p>
+                                نفذنا أكثر من 100 مشروع متكامل في مجال الستائر بمختلف أنواعها، مع التزام كامل بالجودة والدقة في كل خطوة.
+                                خبرتنا تمتد عبر أكثر من مئة موقع بين منازل، شركات، فنادق، ومستشفيات، مما يجعلنا من الأسماء الموثوقة في تنفيذ مشاريع الستائر.
+                                خلال مسيرتنا، أنجزنا 100+ مشروع بتقييمات ممتازة من العملاء، بفضل احترافية التنفيذ والدقة في اختيار الخامات والتصميم.
+                                أكثر من مئة مشروع ناجح يؤكد التزامنا بتقديم حلول عملية وجمالية تلائم جميع المساحات والاحتياجات.
+                                فخورون بأننا أكملنا أكثر من 100 مشروع ساعدنا فيها عملاءنا على تحسين مظهر المساحات وتحقيق أفضل انطباع ممكن..
+                            </p>
+                        </div>
+                    </div>
+                    <div class="templatemo_hexservices col-sm-6">
+                        <div class="blok text-center">
+                            <div class="hexagon-a">
+                                <a class="hlinktop" href="#">
+                                    <div class="hexa-a">
+                                        <div class="hcontainer-a">
+                                            <div class="vertical-align-a">
+                                                <span class="texts-a"><i class="fa fa-thumb-tack"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="hexagonservices">
+                                <a class="hlinkbott" href="#">
+                                    <div class="hexa">
+                                        <div class="hcontainer">
+                                            <div class="vertical-align">
+                                                <span class="texts"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="templatemo_servicetext">
+                            <h3>🛠️ ضمان وصيانة موثوقان لمدة تبدأ من 24 شهرًا</h3>
+                            <p>
+                                نقدم ضمان صيانة يبدأ من 24 شهرًا على جميع أعمال الستائر، لضمان راحة بالك بعد التركيب.
+                                أقل فترة ضمان chezنا هي سنتان كاملتان تشمل المتابعة والصيانة لضمان استمرارية الجودة.
+                                نلتزم بتقديم ضمان لمدة 24 شهرًا أو أكثر حسب نوع المشروع والخامات المستخدمة.
+                                لأن ثقتك تهمنا… كل مشروع ينفذ عبرنا يحصل على ضمان صيانة طويل الأمد يبدأ من 24 شهرًا.
+                                مع كل تركيب، تحصل على دعم وصيانة لمدة سنتين على الأقل لضمان أفضل أداء للستائر والحركة والأنظمة.
+                                نحرص على متابعة مشاريعنا بشكل دوري، لذلك نوفر ضمانًا طويلًا يبدأ من 24 شهرًا يشمل الإصلاح والمعالجة متى احتجت.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- service end -->
+            <!-- contact start -->
+            <div class="content contact" id="menu-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            
+                        </div>
+                        <div class="col-md-3 col-sm-12 leftalign">
+                            <div class="templatemo_contacttitle">تواصل معنا الان </div>
+                            <div class="clear"></div>
+                            
+                            <div class="templatemo_address">
+                                <ul>
+                                    <li class="left fa fa-map-marker"></li>
+                                    <li class="right">
+                                        المملكة العربية السعودية , جدة ,
+                                        <br>
+                                        حي مشرفة 
+                                    </li>
+                                    <li class="clear"></li>
+                                    <li class="left fa fa-phone"></li>
+                                    <li class="right">0536311405</li>
+                                    <li class="clear"></li>
+                                    <li class="left fa fa-phone"></li>
+                                    <li class="right">0568701488</li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-12">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
